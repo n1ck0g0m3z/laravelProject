@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Laravel Quickstart - Basic</title>
+@extends('test')
 
-        <!-- CSS And JavaScript -->
-    </head>
+@section('content')
 
-    <body>
-        <div class="container">
-            <nav class="navbar navbar-default">
+@if ($first == 'Chris')
+    <h2>hi Chris</h2>
+@endif
                 <!-- Navbar Contents -->
-                <p>There we have</p>
-            </nav>
-        </div>
+<p>There we have</p>
 
-        @yield('content')
-    </body>
-</html>
+@stop

@@ -44,6 +44,12 @@ class PagesController extends Controller
         return view('userAdd');
     }
     
+    public function app()
+    {
+        $first = 'Chris';
+        return view('app')->with('first',$first);    
+    }
+    
     public function addMoney()
     {
         return view('payment');
@@ -52,5 +58,10 @@ class PagesController extends Controller
     public function moneyList()
     {
         return view('paymentList');
+    }
+    
+    public function contact()
+    {
+        return view('pages.contact');
     }
 }

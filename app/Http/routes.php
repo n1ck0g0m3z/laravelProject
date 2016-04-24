@@ -28,3 +28,7 @@ Route::get('addMoney','PagesController@addMoney');
 Route::get('money','PagesController@moneyList');
 
 Route::get('aboutPage','PagesController@aboutPage');
+
+Route::get('test','PagesController@app');
+
+Route::get('contact','PagesController@contact');
