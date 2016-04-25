@@ -62,6 +62,12 @@ class PagesController extends Controller
     
     public function contact()
     {
-        return view('pages.contact');
+        $people = [
+            'Taylor Swift', 'Steve Jobs'
+        ];
+        //$people = [];
+        
+        
+        return view('pages.contact',compact('people'));
     }
 }
