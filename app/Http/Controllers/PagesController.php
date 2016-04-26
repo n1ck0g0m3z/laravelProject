@@ -11,6 +11,7 @@ class PagesController extends Controller
     public function aboutPage()
     {
         $url = 'https:<span style="color:red;">//laracasts.com/series/laravel-5-fundamentals/episodes/4</span>';
+        $url2 = 'http://qiita.com/mito_log/items/b2ae413e49fc6d208ff9';
         return View('index')->with('url',$url);
     }
     
@@ -59,6 +60,17 @@ class PagesController extends Controller
     {
         return view('paymentList');
     }
+    
+    public function withdrawalList()
+    {
+        return view('withdrawal_list');
+    }
+    
+    public function subject()
+    {
+        return view('subject');
+    }
+    
     
     public function contact()
     {

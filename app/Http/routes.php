@@ -32,3 +32,7 @@ Route::get('aboutPage','PagesController@aboutPage');
 Route::get('test','PagesController@app');
 
 Route::get('contact','PagesController@contact');
+
+Route::get('withdrawal','PagesController@withdrawalList');
+
+Route::get('subject','PagesController@subject');
