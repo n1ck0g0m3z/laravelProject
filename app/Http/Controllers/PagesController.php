@@ -71,6 +71,10 @@ class PagesController extends Controller
         return view('subject');
     }
     
+    public function monthly()
+    {
+        return view('monthly_total');
+    }
     
     public function contact()
     {

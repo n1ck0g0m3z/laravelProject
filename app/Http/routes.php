@@ -36,3 +36,8 @@ Route::get('contact','PagesController@contact');
 Route::get('withdrawal','PagesController@withdrawalList');
 
 Route::get('subject','PagesController@subject');
+
+Route::get('monthly','PagesController@monthly');
+
+Route::get('articles','ArticlesController@index');
+Route::get('articles/{id}','ArticlesController@show');
