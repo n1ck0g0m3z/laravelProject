@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=1;">
-    <title>Home</title>
-</head>
-<body>
+@extends('test')
+
+@section('content')
     <h1>科目一覧</h1>
     
     <h2>入金科目一覧</h2>
@@ -55,5 +50,5 @@
         <input type="hidden" name="csrf_token" value=""/>
         <button type="submit">追加する</button>
     </form>
-</body>
-</html>
+
+@stop

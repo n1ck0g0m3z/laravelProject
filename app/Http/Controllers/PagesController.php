@@ -12,7 +12,7 @@ class PagesController extends Controller
     {
         $url = 'https:<span style="color:red;">//laracasts.com/series/laravel-5-fundamentals/episodes/4</span>';
         $url2 = 'http://qiita.com/mito_log/items/b2ae413e49fc6d208ff9';
-        return View('index')->with('url',$url);
+        return View('web.index')->with('url',$url);
     }
     
     public function logIn()
@@ -31,18 +31,18 @@ class PagesController extends Controller
                 'last' => 'Gomez'
             ]);*/
         
-        return view('logIn',compact('first','last'));
+        return view('web.logIn',compact('first','last'));
     }
     
     public function about()
     {
         $url = 'HELLO';
-        return view('index')->with('url',$url);
+        return view('web.index')->with('url',$url);
     }
     
     public function add()
     {
-        return view('userAdd');
+        return view('web.userAdd');
     }
     
     public function app()
@@ -53,27 +53,32 @@ class PagesController extends Controller
     
     public function addMoney()
     {
-        return view('payment');
+        return view('web.payment');
     }
     
     public function moneyList()
     {
-        return view('paymentList');
+        return view('web.paymentList');
     }
     
     public function withdrawalList()
     {
-        return view('withdrawal_list');
+        return view('web.withdrawal_list');
     }
     
     public function subject()
     {
-        return view('subject');
+        return view('web.subject');
     }
     
     public function monthly()
     {
-        return view('monthly_total');
+        return view('web.monthly_total');
+    }
+    
+     public function userList()
+    {
+        return view('web.userList');
     }
     
     public function contact()

@@ -1,0 +1,48 @@
+ユーザテーブル：「1レコードが一人のユーザを意味するテーブル」
+users
+    user_id             varbinary(128)      --ユーザID
+    password            varbinary(128)      --パスワード
+    memo                text                --メモ
+    pk(user_id)
+    *CREATED
+    *UPDATE
+    *delete_flag                             0...1   
+    
+入金テーブル：「1レコードが一つの入金を意味するテーブル」
+payments
+    payment_id:         unsigned int not null auto_increment
+    subject:            unsigned int
+    money:              unsigned int
+    payments_date:      datetime
+    pk(payment_id): 
+
+出金テーブル：「1レコードが一つの出金を意味するテーブル」
+withdrawals
+    withdrawal_id       unsigned int not null auto_increment
+    subject:            unsigned int
+    money:              unsigned int
+    withdrawal_date     datetime
+    pk(withdrawal_id):  
+    
+
+>>>>><<<<<<<<
+簿記帳テーブル：
+bookkeepings
+    bookkeeping_id:     unsigned int not null auto_increment
+    debit_subject_id:   unsigned int
+    debit_money:        unsigned int
+    credit_subject_id:  unsigned int
+    credit_money:       unsigned int
+    bookkeeping_date:   datetime
+    pk(bookkeeping_id):
+>>>><<
+
+科目テーブル：
+subjects
+    subject_id           unsigned int not null auto_increment
+    subject_name         varchar(64)
+    type                 tinyint            --1なら入金科目、2なら出金科目
+    activation_flag      tinyint            --1なら有効、0なら無効
+    pk(subject_id)
+    
+    

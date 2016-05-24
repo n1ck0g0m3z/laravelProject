@@ -11,12 +11,14 @@
     <table border="1">
         <tr>
             <th>ユーザID</th>
+            <th>メモ</th>
             <th></th>
             <th></th>
         </tr>
         
         <tr>
             <td>12345</td>
+            <td>ほげほげさんのアカウントだよ</td>
             <!--<td><a href="">パスワード変更</a></td>-->
             <td><form action="./userList" method="post">
                 パスワード<br><input name="pw"><br>

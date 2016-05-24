@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('apps','Controller@logIn');
-
-Route::get('about','PagesController@about');
+Route::get('home','PagesController@about');
 
 Route::get('log','PagesController@logIn');
 
@@ -39,5 +37,9 @@ Route::get('subject','PagesController@subject');
 
 Route::get('monthly','PagesController@monthly');
 
+Route::get('userlist','PagesController@userList');
+
 Route::get('articles','ArticlesController@index');
 Route::get('articles/{id}','ArticlesController@show');
+
+Route::get('personal','PersonalController@index');
