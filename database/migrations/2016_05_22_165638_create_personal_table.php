@@ -29,6 +29,6 @@ class CreatePersonalTable extends Migration
      */
     public function down()
     {
-        Schema::drop('personal');
+        Schema::drop('personals');
     }
 }

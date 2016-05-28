@@ -10,7 +10,7 @@ class PagesController extends Controller
 {
     public function aboutPage()
     {
-        $url = 'https:<span style="color:red;">//laracasts.com/series/laravel-5-fundamentals/episodes/4</span>';
+        $url = 'https:<span style="color:red;">//laracasts.com/series/laravel-5-fundamentals/episodes/12</span>';
         $url2 = 'http://qiita.com/mito_log/items/b2ae413e49fc6d208ff9';
         return View('web.index')->with('url',$url);
     }

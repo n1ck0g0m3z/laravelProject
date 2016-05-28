@@ -14,4 +14,11 @@ class PersonalController extends Controller
         
         return $personal;
     }
+    
+    public function get($id){
+        
+        $personal = Personal::find($id);
+        
+        return $personal;
+    }
 }
