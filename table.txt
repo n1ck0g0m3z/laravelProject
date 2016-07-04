@@ -46,3 +46,5 @@ subjects
     pk(subject_id)
     
     
+dev2.m-fr.net
+gomez

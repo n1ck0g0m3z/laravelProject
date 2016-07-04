@@ -10,7 +10,7 @@ use App\Article;
 
 use Carbon\Carbon;
 
-use App\Http\Requests\CreateArticleRequest;
+use App\Http\Requests\ArticleRequest;
 
 class ArticlesController extends Controller
 {
@@ -42,7 +42,7 @@ class ArticlesController extends Controller
         return view('articles.create');
     }
 
-    public function store(CreateArticleRequest $request)
+    public function store(ArticleRequest $request)
     {
         //validation
         //$this->validate($request, ['title'=>'required','body'=>'required']);
@@ -54,9 +54,20 @@ class ArticlesController extends Controller
         return redirect('articles');
     }
     
-    public function edit()
+    public function edit($id)
     {
+        $article = Article::findOrFail($id);
         
+        return view('articles.edit',compact('article'));
+    }
+    
+    public function update($id, ArticleRequest $request)
+    {
+        $article = Article::findOrFail($id);
+        
+        $article->update($request->all());
+        
+        return redirect('articles');
     }
     
 }

@@ -46,8 +46,17 @@ Route::get('articles/{id}','ArticlesController@show');
 Route::post('articles','ArticlesController@store');
 Route::get('articles/{id}/edit','ArticlesController@edit');
 */
-
+//Route::resource('users','UsersController');
 Route::resource('articles','ArticlesController');
 
 Route::get('personal','PersonalController@index');
 Route::get('personal/{id}','PersonalController@get');
+
+Route::controllers([
+        'auth'=>'Auth\AuthController',
+        'password'=>'Auth\PasswordController'
+    ]);
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
